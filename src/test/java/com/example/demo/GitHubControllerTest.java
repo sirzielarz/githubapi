@@ -39,10 +39,10 @@ class GitHubControllerTest {
         repositoryBuilder.branches(Collections.emptyList());
 
 
-        Mockito.when(gitHubService.listRepositories("test-user"))
+        Mockito.when(gitHubService.listRepositories("test-owner"))
                 .thenReturn(Collections.singletonList(repositoryBuilder.build()));
 
-        mockMvc.perform(get("/api/github/users/test-user/repos")
+        mockMvc.perform(get("/api/github/users/test-owner/repos")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[{'name':'test-repository','ownerLogin':'test-owner','branches':[]}]"));
