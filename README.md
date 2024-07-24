@@ -13,8 +13,8 @@ This Spring Boot application interacts with the GitHub API to fetch user reposit
 ### Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/github-api-integration.git
-cd github-api-integration
+git clone https://github.com/sirzielarz/githubapi.git
+cd githubapi
 ```
 
 ### Configuration
